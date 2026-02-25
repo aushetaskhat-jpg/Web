@@ -1,0 +1,53 @@
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  /* Адаптивная сетка: минимум 280px, максимум 1 часть доступного места */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.store-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e21b1b; /* Фирменный красный Kaspi */
+  font-size: 2.5rem;
+  border-bottom: 3px solid #e21b1b;
+  display: inline-block;
+}
+
+.product-grid {
+  display: grid;
+  /* Адаптивность: 1 колонка на мобилках, 2 на планшетах, 3-4 на десктопах */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}

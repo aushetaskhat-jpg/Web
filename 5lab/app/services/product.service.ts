@@ -1,0 +1,291 @@
+import { Injectable } from '@angular/core';
+import { Category } from '../models/category.model';
+import { Product } from '../models/product.model';
+
+@Injectable({ providedIn: 'root' })
+export class ProductService {
+  categories: Category[] = [
+    { id: 1, name: 'Smartphones' },
+    { id: 2, name: 'Laptops' },
+    { id: 3, name: 'Headphones' },
+    { id: 4, name: 'Tablets' },
+  ];
+
+  products: Product[] = [
+    // =========================
+    // Smartphones (categoryId: 1)
+    // =========================
+    {
+      id: 1,
+      categoryId: 1,
+      name: 'Смартфон Apple iPhone 15 128Gb черный',
+      description: 'Новый iPhone 15 с инновационным дизайном и мощным процессором.',
+      price: 365000,
+      rating: 4.9,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h1d/hfc/86303745998878.jpg?format=gallery-medium',
+      images: [
+        'https://resources.cdn-kaspi.kz/img/m/p/he2/h11/83559338442782.jpg',
+        'https://resources.cdn-kaspi.kz/img/m/p/h13/h14/83559338508318.jpg',
+        'https://resources.cdn-kaspi.kz/img/m/p/hfe/h17/83559338573854.jpg',
+      ],
+      link: 'https://kaspi.kz/shop/p/apple-iphone-15-128gb-chernyi-113137790/',
+    },
+    {
+      id: 2,
+      categoryId: 1,
+      name: 'Смартфон Redmi A5 4/128Gb черный',
+      description: 'Бюджетный смартфон для повседневных задач.',
+      price: 80300,
+      rating: 4.6,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/p27/p8f/67214824.png?format=gallery-medium',
+      images: [
+        'https://resources.cdn-kaspi.kz/img/m/p/p27/p8f/67214824.png?format=gallery-medium',
+      ],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 3,
+      categoryId: 1,
+      name: 'Смартфон Apple iPhone 17 256Gb оранжевый',
+      description: 'Флагманский смартфон Apple (пример товара).',
+      price: 803000,
+      rating: 4.9,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/p18/p96/64168413.png?format=gallery-medium',
+      images: [
+        'https://resources.cdn-kaspi.kz/img/m/p/p18/p96/64168413.png?format=gallery-medium',
+      ],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 4,
+      categoryId: 1,
+      name: 'Смартфон Apple iPhone 15 128Gb (повтор модели — замени на другой реальный)',
+      description: 'Замени на другой смартфон с kaspi.kz (чтобы не было дубля).',
+      price: 365000,
+      rating: 4.8,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h1d/hfc/86303745998878.jpg?format=gallery-medium',
+      images: [
+        'https://resources.cdn-kaspi.kz/img/m/p/he2/h11/83559338442782.jpg',
+      ],
+      link: 'https://kaspi.kz/shop/p/apple-iphone-15-128gb-chernyi-113137790/',
+    },
+    {
+      id: 5,
+      categoryId: 1,
+      name: 'Смартфон (замени на реальный товар с kaspi.kz)',
+      description: 'Добавь любой смартфон с kaspi.kz: Samsung/Xiaomi/Realme и т.д.',
+      price: 250000,
+      rating: 4.5,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h1d/hfc/86303745998878.jpg?format=gallery-medium',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+
+    // =========================
+    // Laptops (categoryId: 2)
+    // =========================
+    {
+      id: 6,
+      categoryId: 2,
+      name: 'Ноутбук Apple MacBook Air 13 2020 8GB/256GB MGN63 серый',
+      description: 'Легкий ноутбук Apple на чипе M1.',
+      price: 395000,
+      rating: 5.0,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h73/h87/63947822596126.jpg',
+      images: [
+        'https://resources.cdn-kaspi.kz/img/m/p/h73/h87/63947822596126.jpg',
+        'https://resources.cdn-kaspi.kz/img/m/p/h1b/h3c/63947825479710.jpg',
+      ],
+      link: 'https://kaspi.kz/shop/p/apple-macbook-air-13-2020-13-3-8gb-256gb-macos-mgn63-seryi-100797845/',
+    },
+    {
+      id: 7,
+      categoryId: 2,
+      name: 'Ноутбук (добавь реальный ноутбук с kaspi.kz)',
+      description: 'Например ASUS / Lenovo / HP и т.д.',
+      price: 320000,
+      rating: 4.6,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h73/h87/63947822596126.jpg',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 8,
+      categoryId: 2,
+      name: 'Ноутбук (добавь реальный ноутбук с kaspi.kz)',
+      description: 'Вставь ссылку и картинку с kaspi.kz.',
+      price: 450000,
+      rating: 4.7,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h73/h87/63947822596126.jpg',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 9,
+      categoryId: 2,
+      name: 'Ноутбук (добавь реальный ноутбук с kaspi.kz)',
+      description: 'Вставь 4-й ноутбук.',
+      price: 380000,
+      rating: 4.5,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h73/h87/63947822596126.jpg',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 10,
+      categoryId: 2,
+      name: 'Ноутбук (добавь реальный ноутбук с kaspi.kz)',
+      description: 'Вставь 5-й ноутбук.',
+      price: 520000,
+      rating: 4.8,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h73/h87/63947822596126.jpg',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+
+    // =========================
+    // Headphones (categoryId: 3)
+    // =========================
+    {
+      id: 11,
+      categoryId: 3,
+      name: 'Наушники Apple AirPods Pro 2 with Type-C',
+      description: 'Активное шумоподавление и отличный звук.',
+      price: 110000,
+      rating: 5.0,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg',
+      images: [
+        'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg',
+        'https://resources.cdn-kaspi.kz/img/m/p/h9d/h64/84108189696030.jpg',
+      ],
+      link: 'https://kaspi.kz/shop/p/apple-airpods-pro-2-with-type-c-belyi-113677582/',
+    },
+    {
+      id: 12,
+      categoryId: 3,
+      name: 'Наушники (добавь реальный товар с kaspi.kz)',
+      description: 'Например AirPods 3 / Sony / JBL.',
+      price: 90000,
+      rating: 4.7,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 13,
+      categoryId: 3,
+      name: 'Наушники (добавь реальный товар с kaspi.kz)',
+      description: 'Вставь 3-и наушники.',
+      price: 65000,
+      rating: 4.6,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 14,
+      categoryId: 3,
+      name: 'Наушники (добавь реальный товар с kaspi.kz)',
+      description: 'Вставь 4-е наушники.',
+      price: 45000,
+      rating: 4.5,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 15,
+      categoryId: 3,
+      name: 'Наушники (добавь реальный товар с kaspi.kz)',
+      description: 'Вставь 5-е наушники.',
+      price: 120000,
+      rating: 4.8,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+
+    // =========================
+    // Tablets (categoryId: 4)
+    // =========================
+    {
+      id: 16,
+      categoryId: 4,
+      name: 'Планшет Apple iPad Air 2024 11" 128Gb',
+      description: 'Новый iPad Air на базе чипа Apple M2.',
+      price: 335000,
+      rating: 4.9,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hfa/h77/86745408634910.png?format=gallery-medium',
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/hc4/h94/86042944733214.jpg'],
+      link: 'https://kaspi.kz/shop/p/apple-ipad-air-11-2024-wi-fi-11-djuim-8-gb-128-gb-seryi-119778165/?c=750000000',
+    },
+    {
+      id: 17,
+      categoryId: 4,
+      name: 'Планшет (добавь реальный планшет с kaspi.kz)',
+      description: 'Например iPad 10 / Samsung Tab / Xiaomi Pad.',
+      price: 220000,
+      rating: 4.6,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hfa/h77/86745408634910.png?format=gallery-medium',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 18,
+      categoryId: 4,
+      name: 'Планшет (добавь реальный планшет с kaspi.kz)',
+      description: 'Вставь 3-й планшет.',
+      price: 280000,
+      rating: 4.7,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hfa/h77/86745408634910.png?format=gallery-medium',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 19,
+      categoryId: 4,
+      name: 'Планшет (добавь реальный планшет с kaspi.kz)',
+      description: 'Вставь 4-й планшет.',
+      price: 310000,
+      rating: 4.8,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hfa/h77/86745408634910.png?format=gallery-medium',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+    {
+      id: 20,
+      categoryId: 4,
+      name: 'Планшет (добавь реальный планшет с kaspi.kz)',
+      description: 'Вставь 5-й планшет.',
+      price: 199000,
+      rating: 4.5,
+      likes: 0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hfa/h77/86745408634910.png?format=gallery-medium',
+      images: [],
+      link: 'https://kaspi.kz/shop/',
+    },
+  ];
+
+  getProductsByCategory(categoryId: number): Product[] {
+    return this.products.filter(p => p.categoryId === categoryId);
+  }
+}
