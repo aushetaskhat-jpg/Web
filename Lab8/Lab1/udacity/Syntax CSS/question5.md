@@ -1,6 +1,0 @@
-Quiz Question
-
-Which of the following CSS declarations can be used to represent the standard color for blue?
-
-color:blue,
-color rgb(0,0,225)
