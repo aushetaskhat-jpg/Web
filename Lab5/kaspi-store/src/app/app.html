@@ -1,0 +1,31 @@
+<div class="page">
+  <header class="topbar">
+    <h1 class="title">Kaspi Store</h1>
+
+    <nav class="categories">
+     <button
+  class="cat-btn"
+  (click)="showAll()"
+  [class.active]="selectedCategoryId === null">
+    
+  </button>
+      <button
+        class="cat-btn"
+        *ngFor="let c of categories"
+        (click)="selectCategory(c.id)"
+        [class.active]="c.id === selectedCategoryId"
+      >
+        {{ c.name }}
+      </button>
+    </nav>
+  </header>
+
+  <div class="hint" *ngIf="!selectedCategoryId">
+    Выбери категорию 👆
+  </div>
+
+  <app-product-list
+  *ngIf="selectedProducts.length > 0"
+  [products]="selectedProducts">
+</app-product-list>
+</div>

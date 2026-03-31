@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Pricing</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#fff;
+      color:#24292f;
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    h1{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+    .subtitle{
+      max-width:850px;
+      margin:0 auto 25px;
+      color:#57606a;
+      line-height:1.5;
+      font-size:16px;
+    }
+    .cta{
+      display:inline-block;
+      background:black;
+      color:white;
+      padding:12px 18px;
+      border-radius:10px;
+      text-decoration:none;
+      margin-bottom:40px;
+      font-weight:bold;
+      font-size:14px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:20px;
+      max-width:1050px;
+      margin:0 auto;
+    }
+
+    .card{
+      border:1px solid #d0d7de;
+      border-radius:12px;
+      padding:20px;
+      text-align:left;
+      box-shadow:0 8px 18px rgba(0,0,0,0.08);
+      position:relative;
+      background:white;
+    }
+
+    .card h2{
+      font-size:20px;
+      margin-bottom:8px;
+    }
+
+    .desc{
+      color:#57606a;
+      margin-bottom:15px;
+      font-size:14px;
+      line-height:1.4;
+    }
+
+    .price{
+      font-size:34px;
+      font-weight:bold;
+      margin-bottom:10px;
+    }
+    .price span{
+      font-size:14px;
+      color:#57606a;
+      font-weight:normal;
+    }
+
+    .btn{
+      display:block;
+      text-align:center;
+      padding:10px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-bottom:10px;
+      font-size:14px;
+    }
+    .btn-dark{
+      background:black;
+      color:white;
+    }
+    .btn-light{
+      border:1px solid #d0d7de;
+      color:black;
+      background:white;
+    }
+
+    .included{
+      margin:15px 0 10px;
+      font-size:13px;
+      font-weight:bold;
+      color:#57606a;
+    }
+
+    ul{
+      padding-left:18px;
+      color:#24292f;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    ul li{
+      margin-bottom:8px;
+      color:#57606a;
+    }
+    .recommended{
+      border:2px solid #1f6feb;
+    }
+    .badge{
+      position:absolute;
+      top:-12px;
+      left:50%;
+      transform:translateX(-50%);
+      background:#1f6feb;
+      color:white;
+      padding:5px 12px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:bold;
+    }
+    @media(max-width:900px){
+      .cards{
+        grid-template-columns:1fr;
+      }
+    }
+    .main{
+        margin:15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Try the Copilot-powered platform</h1>
+  <p class="subtitle">
+    We get it, there's a lot you can do with GitHub. That's why we've packed all of it into a single risk-free trial
+    that includes GitHub Enterprise, Copilot, and Advanced Security.
+  </p>
+  <a class="cta" href="#">Start free for 30 days</a>
+
+  <div class="cards">
+    <div class="card">
+      <h2>Free</h2>
+      <p class="desc">The basics for individuals<br>and organizations</p>
+
+      <div class="price">$0 <span>USD per user/month</span></div>
+
+      <a class="btn btn-light" href="#">Join for free</a>
+
+      <ul>
+        <li>Unlimited public/private repositories</li>
+        <li>Dependabot security and version updates</li>
+        <li>2,000 CI/CD minutes/month</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Team</h2>
+      <p class="desc">Advanced collaboration for<br>individuals and organizations</p>
+
+      <div class="price">$4 <span>USD per user/month</span></div>
+
+      <a class="btn btn-dark" href="#">Continue with Team</a>
+
+      <div class="included">← Everything included in Free, plus...</div>
+
+      <ul>
+        <li>Access to GitHub Codespaces</li>
+        <li>Repository rules</li>
+        <li>Protected branches</li>
+      </ul>
+    </div>
+    <div class="card recommended">
+      <div class="badge">Recommended</div>
+
+      <h2>Enterprise</h2>
+      <p class="desc">Security, compliance,<br>and flexible deployment</p>
+
+      <div class="price">$21 <span>USD per user/month</span></div>
+
+      <a class="btn btn-dark" href="#">Start a free trial</a>
+      <a class="btn btn-light" href="#">Contact Sales</a>
+
+      <div class="included">← Everything included in Team, plus...</div>
+
+      <ul>
+        <li>Data residency</li>
+        <li>Enterprise Managed Users</li>
+        <li>Advanced security features</li>
+      </ul>
+    </div>
+
+  </div>
+  <footer>
+    <div class = "main">
+        <a href="#">English</a>
+    </div>
+    <div class = "links">
+        <a href="#">Link</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="image-container">
+    <img [src]="product.image" [alt]="product.name">
+  </div>
+  
+  <div class="content">
+    <h3 class="name">{{ product.name }}</h3>
+    <p class="description">{{ product.description }}</p>
+    
+    <div class="rating">
+      <span class="stars">
+        <span *ngFor="let star of getStars(product.rating)">⭐</span>
+      </span>
+      <span class="rating-value">{{ product.rating }}</span>
+    </div>
+
+    <div class="share-buttons">
+      <button (click)="shareToTelegram()" class="share-btn tg">
+        ✈️ Telegram
+      </button>
+      <button (click)="shareToWhatsApp()" class="share-btn wa">
+        💬 WharsApp
+      </button>
+    </div>
+    <div class="share-buttons">
+      <button class="share-btn" (click)="like()">
+        ❤️ {{product.likes}}
+      </button>
+
+      <button class="share-btn" (click)="onDelete()">
+        🗑️ Delete
+      </button>
+    </div>
+
+    <div class="footer">
+      <span class="price">{{ product.price | number:'1.0-0' }} ₸</span>
+      <a [href]="product.link" target="_blank" class="buy-button">Купить</a>
+    </div>
+  </div>
+</div>

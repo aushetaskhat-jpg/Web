@@ -1,0 +1,26 @@
+<div class="card">
+  <img [src]="product.image" [alt]="product.name">
+
+  <div class="body">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+
+    <div class="price">
+      {{ product.price | number }} ₸
+    </div>
+
+    <a class="buy" [href]="product.link" target="_blank">
+      Купить
+    </a>
+    <div class="actions">
+  <button class="whatsapp" (click)="shareWhatsApp()">
+    WhatsApp
+  </button>
+
+  <button class="telegram" (click)="shareTelegram()">
+    Telegram
+  </button>
+</div>
+
+  </div>
+</div>
