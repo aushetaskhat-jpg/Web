@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from .models import Product, Category
+from django.db.models import Avg
 
 def product_list(request):
     products = Product.objects.all()
@@ -24,4 +25,18 @@ def category_products(request, id):
     category = get_object_or_404(Category, id=id)
     products = category.products.all()
     data = [{"id": p.id, "name": p.name, "price": p.price} for p in products]
+    return JsonResponse(data, safe=False)
+
+def category_stats(request):
+    categories = Category.objects.annotate(
+        avg_price=Avg('products__price'))
+
+    data = []
+    for c in categories:
+        data.append({
+            "id": c.id, 
+            "name": c.name, 
+            "avg_price": c.avg_price or 0
+        })
+    
     return JsonResponse(data, safe=False)

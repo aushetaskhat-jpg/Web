@@ -4,7 +4,9 @@ from .views import *
 urlpatterns = [
     path('products/', product_list),
     path('products/<int:id>/', product_detail),
+    path('categories/stats/', category_stats), 
     path('categories/', category_list),
     path('categories/<int:id>/', category_detail),
     path('categories/<int:id>/products/', category_products),
+    path('categoties/stats',category_stats),
 ]
